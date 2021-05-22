@@ -1,0 +1,2 @@
+# StudentLifeSimulator
+University practical project
