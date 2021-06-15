@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class SoundValueControler : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField] private AudioSource audio;
+    [SerializeField] private new AudioSource audio;
     [SerializeField] private Slider slider;
     [SerializeField] private Text text;
 
@@ -33,7 +33,7 @@ public class SoundValueControler : MonoBehaviour
             }
             else
             {
-                this.volume = 0.5f;
+                this.volume = this.audio.volume;
                 PlayerPrefs.SetFloat(this.saveVolumeKey, this.volume);
                 this.audio.volume = this.volume;
             }
